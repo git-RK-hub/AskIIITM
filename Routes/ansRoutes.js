@@ -14,4 +14,8 @@ router
   .route('/answer/getUserAnswers')
   .get(authController.protect, ansController.getUserAnswers);
 
+router
+  .route('/answer/getMostUpvotedAnswers/:questionId')
+  .get(ansController.getUserAnswers);
+
 module.exports = router;
